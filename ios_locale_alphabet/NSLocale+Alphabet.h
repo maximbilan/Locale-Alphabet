@@ -10,6 +10,8 @@
 
 @interface NSLocale (Alphabet)
 
++ (NSArray *)charactersByISOLangCode:(NSString *)isoLangCode;
 + (NSArray *)charactersInCharacterSet:(NSCharacterSet *)charset;
++ (NSString *)isoLangCodeFromString:(NSString *)text;
 
 @end

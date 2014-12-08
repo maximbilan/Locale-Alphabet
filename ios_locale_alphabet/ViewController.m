@@ -20,13 +20,17 @@
 {
     [super viewDidLoad];
     
-    NSString *stringToTest = @"עִבְרִית";
-    NSString *isoLangCode = (__bridge_transfer NSString *)CFStringTokenizerCopyBestStringLanguage((__bridge CFStringRef)stringToTest, CFRangeMake(0, stringToTest.length));
+    NSString *textHebrew = @"עִבְרִית";
+    NSString *isoLangCode = [NSLocale isoLangCodeFromString:textHebrew];
+    NSArray *chars = [NSLocale charactersByISOLangCode:isoLangCode];
+    for (NSString *str in chars) {
+        NSLog(@"%@", str);
+    }
     
-    NSCharacterSet * charset = [[[NSLocale alloc] initWithLocaleIdentifier:isoLangCode] objectForKey:NSLocaleExemplarCharacterSet];
-    NSArray * chars = [NSLocale charactersInCharacterSet:charset];
-    for (NSString *str in chars)
-    {
+    NSString *textRu = @"птнпнх";
+    isoLangCode = [NSLocale isoLangCodeFromString:textRu];
+    chars = [NSLocale charactersByISOLangCode:isoLangCode];
+    for (NSString *str in chars) {
         NSLog(@"%@", str);
     }
 }
