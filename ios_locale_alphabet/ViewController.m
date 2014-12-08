@@ -8,20 +8,27 @@
 
 #import "ViewController.h"
 
+#import "NSLocale+Alphabet.h"
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSString *stringToTest = @"עִבְרִית";
+    NSString *isoLangCode = (__bridge_transfer NSString *)CFStringTokenizerCopyBestStringLanguage((__bridge CFStringRef)stringToTest, CFRangeMake(0, stringToTest.length));
+    
+    NSCharacterSet * charset = [[[NSLocale alloc] initWithLocaleIdentifier:isoLangCode] objectForKey:NSLocaleExemplarCharacterSet];
+    NSArray * chars = [NSLocale charactersInCharacterSet:charset];
+    for (NSString *str in chars)
+    {
+        NSLog(@"%@", str);
+    }
 }
 
 @end

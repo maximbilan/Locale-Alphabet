@@ -10,4 +10,18 @@
 
 @implementation NSLocale (Alphabet)
 
++ (NSArray *)charactersInCharacterSet:(NSCharacterSet *)charset
+{
+    NSMutableArray *array = [NSMutableArray array];
+    NSData *data = [charset bitmapRepresentation];
+    const char *bytes = [data bytes];
+    
+    for (int i = 0; i < 8192; ++i) {
+        if (bytes[i >> 3] & (((unsigned int)1) << (i & 7))) {
+            [array addObject:[NSString stringWithFormat:@"%C", (unichar)i]];
+        }
+    }
+    return [NSArray arrayWithArray:array];
+}
+
 @end

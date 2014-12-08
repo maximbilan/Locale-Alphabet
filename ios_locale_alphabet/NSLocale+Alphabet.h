@@ -10,4 +10,6 @@
 
 @interface NSLocale (Alphabet)
 
++ (NSArray *)charactersInCharacterSet:(NSCharacterSet *)charset;
+
 @end
