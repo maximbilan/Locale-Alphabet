@@ -1,5 +1,5 @@
 //
-//  NSLocale+Alphabet.h
+//  NSString+Locale.h
 //  ios_locale_alphabet
 //
 //  Created by Maxim Bilan on 12/8/14.
@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSLocale (Alphabet)
+@interface NSString (Locale)
 
-+ (NSArray *)alphabetFromText:(NSString *)text;
-+ (NSArray *)charactersInCharacterSet:(NSCharacterSet *)charset;
+- (NSString *)isoLangCode;
 
 @end

@@ -14,6 +14,7 @@
 		6D5CE9EC1A35DEC100C5DBE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CE9EB1A35DEC100C5DBE4 /* Images.xcassets */; };
 		6D5CE9EF1A35DEC100C5DBE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CE9ED1A35DEC100C5DBE4 /* LaunchScreen.xib */; };
 		6D5CEA071A35DF8000C5DBE4 /* NSLocale+Alphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEA061A35DF8000C5DBE4 /* NSLocale+Alphabet.m */; };
+		6D5CEA0A1A35E92200C5DBE4 /* NSString+Locale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEA091A35E92200C5DBE4 /* NSString+Locale.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		6D5CE9EE1A35DEC100C5DBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6D5CEA051A35DF8000C5DBE4 /* NSLocale+Alphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+Alphabet.h"; sourceTree = "<group>"; };
 		6D5CEA061A35DF8000C5DBE4 /* NSLocale+Alphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+Alphabet.m"; sourceTree = "<group>"; };
+		6D5CEA081A35E92200C5DBE4 /* NSString+Locale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Locale.h"; sourceTree = "<group>"; };
+		6D5CEA091A35E92200C5DBE4 /* NSString+Locale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Locale.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 			children = (
 				6D5CEA051A35DF8000C5DBE4 /* NSLocale+Alphabet.h */,
 				6D5CEA061A35DF8000C5DBE4 /* NSLocale+Alphabet.m */,
+				6D5CEA081A35E92200C5DBE4 /* NSString+Locale.h */,
+				6D5CEA091A35E92200C5DBE4 /* NSString+Locale.m */,
 				6D5CE9E21A35DEC100C5DBE4 /* AppDelegate.h */,
 				6D5CE9E31A35DEC100C5DBE4 /* AppDelegate.m */,
 				6D5CE9E51A35DEC100C5DBE4 /* ViewController.h */,
@@ -158,6 +163,7 @@
 				6D5CE9E41A35DEC100C5DBE4 /* AppDelegate.m in Sources */,
 				6D5CE9E11A35DEC100C5DBE4 /* main.m in Sources */,
 				6D5CEA071A35DF8000C5DBE4 /* NSLocale+Alphabet.m in Sources */,
+				6D5CEA0A1A35E92200C5DBE4 /* NSString+Locale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,13 @@
 //
 
 #import "NSLocale+Alphabet.h"
+#import "NSString+Locale.h"
 
 @implementation NSLocale (Alphabet)
 
-+ (NSArray *)charactersByISOLangCode:(NSString *)isoLangCode
++ (NSArray *)alphabetFromText:(NSString *)text
 {
-    NSCharacterSet *charset = [[[NSLocale alloc] initWithLocaleIdentifier:isoLangCode] objectForKey:NSLocaleExemplarCharacterSet];
+    NSCharacterSet *charset = [[[NSLocale alloc] initWithLocaleIdentifier:text.isoLangCode] objectForKey:NSLocaleExemplarCharacterSet];
     return [self charactersInCharacterSet:charset];
 }
 
@@ -28,12 +29,6 @@
         }
     }
     return [NSArray arrayWithArray:array];
-}
-
-+ (NSString *)isoLangCodeFromString:(NSString *)text
-{
-    NSString *isoLangCode = (__bridge_transfer NSString *)CFStringTokenizerCopyBestStringLanguage((__bridge CFStringRef)text, CFRangeMake(0, text.length));
-    return isoLangCode;
 }
 
 @end

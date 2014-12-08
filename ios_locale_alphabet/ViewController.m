@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "NSLocale+Alphabet.h"
+#import "NSString+Locale.h"
 
 @interface ViewController ()
 
@@ -21,15 +22,13 @@
     [super viewDidLoad];
     
     NSString *textHebrew = @"עִבְרִית";
-    NSString *isoLangCode = [NSLocale isoLangCodeFromString:textHebrew];
-    NSArray *chars = [NSLocale charactersByISOLangCode:isoLangCode];
+    NSArray *chars = [NSLocale alphabetFromText:textHebrew];
     for (NSString *str in chars) {
         NSLog(@"%@", str);
     }
     
     NSString *textRu = @"птнпнх";
-    isoLangCode = [NSLocale isoLangCodeFromString:textRu];
-    chars = [NSLocale charactersByISOLangCode:isoLangCode];
+    chars = [NSLocale alphabetFromText:textRu];
     for (NSString *str in chars) {
         NSLog(@"%@", str);
     }
