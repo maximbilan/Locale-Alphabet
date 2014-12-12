@@ -1,2 +1,1 @@
-ios_locale_alphabet
-===================
+Example which shows how to get current alphabet from text.
