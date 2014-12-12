@@ -1,1 +1,1 @@
-Example which shows how to get current alphabet from text.
+An example that shows how to take the current alphabet from text.
